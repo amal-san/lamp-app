@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Typerex</title>
+<link href="txtstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+</script>
+</script>
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <body>
+  <div id ="head" class ="head">
+  <h1 align="center"> Typerex </h1>
+
+
+  </div>
+    <div id="list">
+      <p id = "para">Merciful God! the Count has been to him, and there is some new scheme of terror afoot! Later.--I went after my round to Van Helsing and told him my suspicion. He grew very grave; and, after thinking the matter over for a while asked me to take him to Renfield. I did so. As we came to the door we heard the lunatic within singing gaily, as he used to do in the time which now seems so long ago.</p>
+    </div>
+  <div id = "typing">
+	 <form id = "myform">
+     <input id="my-text-box" type = "text" style="font-size: 15pt; height: 30px; width:500px; ">       </input>
+	 </form>
+       <div id = "start">
+         <button id="startClock"> Start </button><br><br>
+          <span id="count">60</span> seconds remaining
+	  <div id="messages" style="white-space:pre;"></div>
+      <div id = "error"  style ="white-space;pre;"></div>
+      <div id ="wpm" style ="white-space;pre;"></div>
+      </div>
+      </div>
+      <script>
+	  window.onload = function() {
+	  const myInput = document.getElementById('my-text-box');
+      myInput.onpaste = function(e) {
+      e.preventDefault();
+            }
+       }
+      var text = "Merciful God! the Count has been to him, and there is some new scheme of terror afoot! Later.--I went after my round to Van Helsing and told him my suspicion. He grew very grave; and, after thinking the matter over for a while asked me to take him to Renfield. I did so. As we came to the door we heard the lunatic within singing gaily, as he used to do in the time which now seems so long ago."
+      var input = document.querySelector('#my-text-box');
+
+      var messages = document.querySelector('#messages');
+
+      var error = document.querySelector('#error');
+
+      var l = text.length;
+
+      var wpm = document.querySelector('#wpm')
+
+      input.addEventListener('input', function() {
+	       var i = 0;
+	       var errors = 0;
+	       var correct = 0;
+		   var j=0;
+		   var word = document.getElementById("para").innerHTML;
+	        for(i=0;i<text.length;i++) {
+
+		          if(input.value[i] == text[i]) {
+
+                        correct +=1;
+  		            messages.textContent =  correct+ '\n'+ word[i];
+
+
+
+	               }
+	               else {
+
+	                   error.textContent = l - correct +'\n';
+
+	               }
+
+	          }
+	          wpm.textContent = correct/5;
+
+               });
+               $("#startClock").click( function(){
+                 var counter = 60;
+                 setInterval(function() {
+                   counter--;
+                   if (counter >= 0) {
+                     document.getElementById("startClock").disabled = true;
+                     span = document.getElementById("count");
+                     span.innerHTML = counter;
+                   }
+                   if (counter === 0) {
+                  document.getElementById("my-text-box").disabled = true;
+                  clearInterval(counter);
+                }
+              }, 1000);
+            })
+
+
+</script>
+  </body>
+</body>
+</html>
