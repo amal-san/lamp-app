@@ -7,6 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.min.js"></script>
+
 <script type="text/javascript">
 </script>
 </script>
@@ -19,14 +20,15 @@
   <div id ="head" class ="head">
   <h1 align="center"> Typerex </h1>
 
-
   </div>
+  <br>
     <div id="list">
       <p id = "para">Merciful God! the Count has been to him, and there is some new scheme of terror afoot! Later.--I went after my round to Van Helsing and told him my suspicion. He grew very grave; and, after thinking the matter over for a while asked me to take him to Renfield. I did so. As we came to the door we heard the lunatic within singing gaily, as he used to do in the time which now seems so long ago.</p>
     </div>
+    <br>
   <div id = "typing">
 	 <form id = "myform">
-     <input id="my-text-box" type = "text" style="font-size: 15pt; height: 30px; width:500px; ">       </input>
+    Type here:  <input id="my-text-box" type = "text" style="font-size: 15pt; height: 30px; width:500px; ">     </input>
 	 </form>
        <div id = "start">
          <button id="startClock"> Start </button><br><br>
@@ -35,6 +37,9 @@
       <div id = "error"  style ="white-space;pre;"></div>
       <div id ="wpm" style ="white-space;pre;"></div>
       </div>
+      </div>
+      <div class="alert alert-success">
+   <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
       </div>
       <script>
 	  window.onload = function() {
@@ -77,7 +82,7 @@
 	               }
 
 	          }
-	          wpm.textContent = correct/5;
+	          wpm.textContent =correct/5 + " Wpm";
 
                });
                $("#startClock").click( function(){
