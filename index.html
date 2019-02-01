@@ -43,9 +43,11 @@
       </div>
       <div id="alert"style="display: none;">
         <h1 style="text-align:center">Completed!!</h1>
-        <h2 id = "Wordsper"style="text-align:center"></h2>
+        <h2 id = "Wordsper"style="text-align:center">0</h2>
         <h3 style="text-align:center">Words per Minute</h3>
         <h4 style="text-align:center"><a href = "index.html">Try again.</h4></a>
+        <br>
+        <h4 style="text-align:center"><a href = "login.html">Go to main page.</h4></a>
       </div>
 
 
@@ -79,11 +81,9 @@
 
 		          if(input.value[i] == text[i]) {
 
+
                         correct +=1;
   		            messages.textContent =  correct+ '\n'+word[i];
-
-
-
 	               }
 	               else {
 
@@ -94,13 +94,7 @@
 	          }
             var finalwpm = correct/5;
 	          wpm.textContent = correct/5;
-            if(finalwpm != 0) {
-                document.getElementById('Wordsper').innerHTML = wpm.textContent;
-            }
-            else {
-              var p = "0";
-              document.getElementById('Wordsper').innerHTML = p;
-            }
+            document.getElementById('Wordsper').innerHTML = finalwpm;
 
 
                });
