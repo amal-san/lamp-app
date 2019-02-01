@@ -7,7 +7,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 </script>
 </script>
@@ -18,7 +20,7 @@
 <body>
   <body>
   <div id ="head" class ="head">
-  <h1 align="center"> Typerex </h1>
+  <h1 align="center" style="color:linear-gradient(to bottom, #000099 21%, #cc99ff 103%);"> Typerex </h1>
 
   </div>
   <br>
@@ -38,9 +40,14 @@
       <div id ="wpm" style ="white-space;pre;"></div>
       </div>
       </div>
-      <div class="alert alert-success">
-   <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+      <div id="alert"style="display: none;">
+        <h1 style="text-align:center">Completed!!</h1>
+        <h2 id = "Wordsper"style="text-align:center"></h2>
+        <h3 style="text-align:center">Words per Minute</h3>
+        <h4 style="text-align:center"><a href = "index.html">Try again.</h4></a>
       </div>
+
+
       <script>
 	  window.onload = function() {
 	  const myInput = document.getElementById('my-text-box');
@@ -82,7 +89,9 @@
 	               }
 
 	          }
-	          wpm.textContent =correct/5 + " Wpm";
+	          wpm.textContent = correct/5;
+            document.getElementById('Wordsper').innerHTML = wpm.textContent;
+
 
                });
                $("#startClock").click( function(){
@@ -93,9 +102,12 @@
                      document.getElementById("startClock").disabled = true;
                      span = document.getElementById("count");
                      span.innerHTML = counter;
+
+
                    }
                    if (counter === 0) {
                   document.getElementById("my-text-box").disabled = true;
+                  document.getElementById("alert").style.display = "block";
                   clearInterval(counter);
                 }
               }, 1000);
