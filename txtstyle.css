@@ -11,7 +11,7 @@ html, body {font-family:sans-serif;
   position: relative;
   border-style: double;
 }
-#list p {
+#list p1 {
   animation: fadin 2s;
   -moz-animation: fadin 2s; /* Firefox */
   -webkit-animation: fadin 2s; /* Safari and Chrome */
@@ -51,6 +51,7 @@ html, body {font-family:sans-serif;
         opacity: 1;
     }
 }
+
   #typing  {
      text-align:center;
      margin: auto;
@@ -108,7 +109,7 @@ display:block;
   margin-left: -200px;
   border: 1px solid black;
 
-
+}
 
 
 /* loginform */
@@ -159,26 +160,6 @@ display:block;
   border-radius: 30px;
 
 }
-
-#nthEverthing:nth-letter(odd),
-#nthEverthing:nth-letter(even){
-  display:inline-block;
-  text-transform:uppercase;
-  width:80px;
-  width:80px;
-}
-#word:nth-word(4){
-  color:green;
-}
-
-#word:first-word{
-  color:blue;
-}
-
-#word:nth-word(4){
-  color:green;
-}
-
-p#word:last-word{
-  color:red;
+.red {
+    color: red;
 }
