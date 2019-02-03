@@ -112,9 +112,19 @@ display:block;
 }
 .wrapper {
     text-align: center;
-    color: white;
 }
-
+#alertbt {
+  padding: 7px;
+  padding-right: 6px;
+  background: #252839;
+  border: #252839;
+  font-size: 15px;
+}
+#Wordsper {
+    padding: 1px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+}
 /* loginform */
 
 #loginform{
@@ -165,4 +175,9 @@ display:block;
 }
 .red {
     color: red;
+}
+#wpm {
+  padding-top: .5px;
+
+
 }
