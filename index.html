@@ -20,12 +20,12 @@
 
   <body>
   <div id ="head" class ="head">
-  <h1 align="center" style="color:linear-gradient(to bottom, #000099 21%, #cc99ff 103%);"> Typerex </h1>
+  <h1 align="center" style="color:white"> Typerex </h1>
 
   </div>
   <br>
     <div id="list">
-      <p1 id = "para"></p>
+      <p1 id = "para" style="color:black"></p>
 
     </div>
     <br>
@@ -42,12 +42,14 @@
       </div>
       </div>
       <div id="alert"style="display: none;">
+        <i style="font-size:24px" class="fa">&#xf00d;</i>
         <h1 style="text-align:center">Completed!!</h1>
-        <h2 id = "Wordsper"style="text-align:center">0</h2>
-        <h3 style="text-align:center">Words per Minute</h3>
-        <h4 style="text-align:center"><a href = "javascript:location.reload(true)">Try again.</h4></a>
+        <h2 id = "Wordsper"style="text-align:center; font-size:60px;">0</h2>
+        <h3 style="text-align:center;font-size:20px;font-weight:bold;">WPM</h3>
         <br>
-        <h4 style="text-align:center"><a href = "login.html">Go to main page.</h4></a>
+        <div class="wrapper">
+        <button id="startClock" onclick="stbutton()"><a href = "javascript:location.reload(true)" style="color:white">Try again</a></button>
+      </div>
       </div>
 
 
@@ -119,7 +121,7 @@
 
                });
                $("#startClock").click( function(){
-                 var counter = 60;
+                 var counter = 2;
                  setInterval(function() {
                    counter--;
                    if (counter >= 0) {
