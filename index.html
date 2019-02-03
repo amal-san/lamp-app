@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript">
 </script>
 </script>
@@ -42,13 +43,15 @@
       </div>
       </div>
       <div id="alert"style="display: none;">
-        <i style="font-size:24px" class="fa">&#xf00d;</i>
+        <div id="crosign">
+        <i class="fa fa-close" style="font-size:20px;text-align:justify;"onclick="remove();document.location.reload(true);"></i>
+      </div>
         <h1 style="text-align:center">Completed!!</h1>
         <h2 id = "Wordsper"style="text-align:center; font-size:60px;">0</h2>
-        <h3 style="text-align:center;font-size:20px;font-weight:bold;">WPM</h3>
+        <h3 id = "wpm" style="text-align:center;font-size:20px;font-weight:bold;">WPM</h3>
         <br>
         <div class="wrapper">
-        <button id="startClock" onclick="stbutton()"><a href = "javascript:location.reload(true)" style="color:white">Try again</a></button>
+        <button id="alertbt" onclick="stbutton();document.location.reload(true);"style="color:white">Try again</button>
       </div>
       </div>
 
@@ -121,7 +124,8 @@
 
                });
                $("#startClock").click( function(){
-                 var counter = 2;
+                 $("#my-text-box").focus();
+                 var counter = 3;
                  setInterval(function() {
                    counter--;
                    if (counter >= 0) {
@@ -140,6 +144,13 @@
             function stbutton() {
               document.getElementById("my-text-box").disabled = false;
               document.getElementById("startClock").disabled = true;
+              document.getElementById("alert").style.display ="none";
+
+            }
+            function remove() {
+              document.getElementById("startClock").disabled = false;
+              document.getElementById("alert").style.display ="none";
+
             }
 
 </script>
