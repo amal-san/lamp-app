@@ -7,7 +7,7 @@ html, body {font-family:sans-serif;
   width: 60%;
   padding: 20px;
   font-size: 30px;
-  background: linear-gradient(to bottom, #33ccff 21%, #66ffff 103%);
+  background: #b5b5b7;
   position: relative;
   border-style: double;
 }
@@ -67,7 +67,7 @@ html, body {font-family:sans-serif;
 
   }
   #startClock {
-  background: linear-gradient(to bottom right, #9900ff 9%, #0033cc 82%);
+  background: #252839;
   border: blue;
   color: white;
   padding: 5px 20px;
@@ -86,7 +86,7 @@ display:block;
 .head {
   font-family: Aldrich;
    border: 3px solid black;
-   background: linear-gradient(to left, #9900ff 0%, #ff00ff 94%);
+   background: #252839;
    padding:0px;
 
 }
@@ -97,7 +97,7 @@ display:block;
   font-size: 25px;
 }
 #alert {
-  background: linear-gradient(to bottom, #ccccff 1%, #ffffff 104%);
+  background: #F1DC50 ;
   background-position: top;
   font-family: cursive;
   height: 300px;
@@ -110,7 +110,10 @@ display:block;
   border: 1px solid black;
 
 }
-
+.wrapper {
+    text-align: center;
+    color: white;
+}
 
 /* loginform */
 
