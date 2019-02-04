@@ -6,27 +6,38 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  </head>
+</head>
   <body>
+    <script type="text/javascript">
+      function shwpass() {
+        var show = document.getElementById("pass");
+        if(show.type == "password") {
+          show.type = "text";
+        }
+        else {
+          show.type = "password";
+        }
+      }
+      </script>
     <div id ="head" class ="head">
     <h1 align="center"style="color:white;"> Typerex </h1>
       </div>
       <br>
-      <table>
        <div id="loginform" class="loginform">
          <div id = "headlogin">
         <h1 style="color:black;" align="center">Login </h1>
         </div>
        <form id = "login" align="center" action="login.php" method="post">
          <br><br>
-         <font color="white"><dd>Username<br></dd></font>
-          <dd><dd><input id = "uname" type="text" name= "uname" style="font-size: 10pt; height: 15px; width:240px; "> </input></dd>
-        <br><br><br>
-        <font color="black"><dd>Password<br></dd></font>
-                <dd><input id= "pass" type="password" name= "pass"style="font-size: 15pt; height: 15px; width:240px; "> </input></dd>
+         <font color="black">Username</font><br>
+        <input id = "uname" type="text" name= "uname" style="font-size: 10pt; height: 25px; width:240px;"> </input>
         <br><br>
+        <font color="black"><dd>Password<br></dd></font>
+                <dd><input id= "pass" type="password" name= "pass"style="font-size: 10pt; height: 25px; width:240px; "> </input></dd>
+        <br>
+        <input type="checkbox" onclick="shwpass()">Show Password
         <dd><input id = "submit" type="submit" value = "Login"/></dd>
        </div>
-       </table>
+
     </body>
     </html>
