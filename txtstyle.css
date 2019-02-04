@@ -1,6 +1,6 @@
 html, body {font-family:sans-serif;
             font-size: 15px;
-            margin: 0;;
+            margin: 0;
 }
 #list {
   margin: auto;
@@ -89,7 +89,6 @@ display:block;
    background: #252839;
    padding:0px;
    margin: auto;
-   text-align: right;
 
 
 
@@ -129,8 +128,21 @@ display:block;
     padding-bottom: 1px;
     padding-left: 2px;
 }
+.head div {
+  display: inline-grid;
 
+}
+.home {
+  float: right;
+   margin-right: : auto;
+   padding-top: 17px;
+   padding-right: 50px;
+   margin-left: auto;
+}
+.head {
+  text-align: center;
 
+}
 /* loginform */
 
 #loginform{
