@@ -88,6 +88,10 @@ display:block;
    border: 3px solid black;
    background: #252839;
    padding:0px;
+   margin: auto;
+   text-align: right;
+
+
 
 }
 #wpm {
@@ -125,24 +129,27 @@ display:block;
     padding-bottom: 1px;
     padding-left: 2px;
 }
+
+
 /* loginform */
 
 #loginform{
   font-family: cursive;
   height: 300px;
   width: 350px;
-  background:  linear-gradient(to bottom, #ccff66 0%, #66ffcc 100%);
+  background:  #b5b5b7;
   position:absolute;
   top: 50%;
   left: 50%;
   margin-top: -100px;
   margin-left: -200px;
+  text-align: center;
 }
 #uname {
   font-size:8px;
   padding:.5px;
   display: inline;
-  float: left;
+  align:right;
 
 }
 #pass {
@@ -151,10 +158,12 @@ display:block;
   display: inline;
 }
 #submit {
-  padding:4px;
+  padding:3px;
   padding-right: 10px;
+  padding-left: 10px;
   position: relative;
-  background-color: #e03891;
+  background-color: #252839;
+  color: white;
 }
 #headlogin {
   font-family:  Aldrich;
@@ -166,11 +175,6 @@ display:block;
   font-style: normal;
   position: relative;
   height: 50px;
-
-}
-#loginform h1 {
-  border: 1px solid black;
-  border-radius: 30px;
 
 }
 .red {
