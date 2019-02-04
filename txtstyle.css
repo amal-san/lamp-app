@@ -208,3 +208,12 @@ display:block;
 #username {
   float: left;
 }
+/* Profile page */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 370px;
+  position: absolute;
+  padding-right: 20px;
+}
