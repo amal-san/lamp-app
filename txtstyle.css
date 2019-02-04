@@ -139,8 +139,16 @@ display:block;
    padding-right: 50px;
    margin-left: auto;
 }
+.login {
+  float: right;
+  margin-left: auto;
+  padding-top: 17px;
+  padding-right: 40px;
+  margin-right: : auto;
+}
 .head {
   text-align: center;
+  padding-left: 100px;
 
 }
 /* loginform */
@@ -196,4 +204,7 @@ display:block;
   padding-top: .5px;
 
 
+}
+#username {
+  float: left;
 }
