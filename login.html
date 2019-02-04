@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body>
     <script type="text/javascript">
@@ -19,25 +20,35 @@
         }
       }
       </script>
-    <div id ="head" class ="head">
-    <h1 align="center"style="color:white;"> Typerex </h1>
+      <div id ="head" class ="head">
+        <div id = "Title">
+      <h1 style="color:white; text-align:center"> Typerex </h1>
+    </div>
+      <div id = "home" class = "home">
+        <i class="fa fa-home" style="font-size:38px;color:white;align:center;"></i>
+      </div>
       </div>
       <br>
        <div id="loginform" class="loginform">
          <div id = "headlogin">
         <h1 style="color:black;" align="center">Login </h1>
-        </div>
+      </div>
        <form id = "login" align="center" action="login.php" method="post">
          <br><br>
+         <div style="float:left;padding-left:55px;">
          <font color="black">Username</font><br>
-        <input id = "uname" type="text" name= "uname" style="font-size: 10pt; height: 25px; width:240px;"> </input>
+       </div><br>
+        <input id = "uname" type="text" name= "uname" placeholder="Enter username"style="font-size: 10pt; height: 25px; width:240px;"> </input>
         <br><br>
+        <div style="float:left;padding-left:55px;">
         <font color="black"><dd>Password<br></dd></font>
-                <dd><input id= "pass" type="password" name= "pass"style="font-size: 10pt; height: 25px; width:240px; "> </input></dd>
+      </div>
+      <br>
+        <dd><input id= "pass" type="password" name= "pass" placeholder="Enter password"style="font-size: 10pt; height: 25px; width:240px; "> </input></dd>
         <br>
         <input type="checkbox" onclick="shwpass()">Show Password
         <dd><input id = "submit" type="submit" value = "Login"/></dd>
-       </div>
+      </div>
 
     </body>
     </html>
