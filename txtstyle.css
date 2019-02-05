@@ -222,3 +222,20 @@ display:block;
   position: absolute;
   padding-right: 20px;
 }
+
+/*Registerform */
+
+#registerform {
+  font-family: cursive;
+  height: 300px;
+  width: 350px;
+  background:  #b5b5b7;
+  position:absolute;
+  top: 45%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  text-align: center;
+  height: 380px;
+  width:400px;
+}
