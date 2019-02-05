@@ -10,6 +10,7 @@ html, body {font-family:sans-serif;
   background: #b5b5b7;
   position: relative;
   border-style: double;
+  font-family: courier;
 }
 #list p1 {
   animation: fadin 2s;
@@ -84,7 +85,8 @@ display:block;
 }
 
 .head {
-  font-family: Aldrich;
+
+   font-family: Aldrich;
    border: 3px solid black;
    background: #252839;
    padding:0px;
@@ -208,6 +210,9 @@ display:block;
 #username {
   float: left;
 }
+
+
+
 /* Profile page */
 #container {
   display: flex;
