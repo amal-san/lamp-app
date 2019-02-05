@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+  <link href="txtstyle.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id ="head" class ="head">
+    <div id = "Title">
+     <h1 style="color:white; text-align:center"> Typerex </h1>
+     </div>
+      <div id = "home" class = "home">
+        <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.html';"></i>
+      </div>
+      <div id = "login" class = "login">
+      <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href ='logout.php'"></i>
+      <br>
+      </div>
+    </div>
+    <div id="registerform">
+      <div id = "regihead">
+      <h3>Register</h3>
+      </div>
+      <br><br>
+      <form id = "register" action = "register.php" method = "post">
+      <input type="text" name = "username" placeholder="Username"style="font-size: 10pt; height: 25px; width:240px;">
+      <br><br><br>
+      <input type="email" name = "email"  placeholder="Email"style="font-size: 10pt; height: 25px; width:240px;">
+      <br><br><br>
+      <input type ="password" id = "password" name = "password" placeholder="Password"style="font-size: 10pt; height: 25px; width:240px;">
+      <br><br>
+      <input type="checkbox" onclick="shwpass()">Show Password
+      <br><br>
+      <input id = "submit" type="submit" value = "Login"/>
+      </form>
+      </div>
+      <script type="text/javascript">
+        function shwpass() {
+          var show = document.getElementById("password");
+          if(show.type == "password") {
+            show.type = "text";
+          }
+          else {
+            show.type = "password";
+          }
+        }
+        </script>
+    </body>
+    </html>
