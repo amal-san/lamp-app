@@ -1,4 +1,5 @@
 <?php
+ 
 $servername = "localhost";
 $username = "root";
 $password = "pass";
@@ -6,6 +7,9 @@ $dbname = "typerex";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+
+
 
 // Check connection
 if ($conn->connect_error) {
@@ -23,18 +27,20 @@ $sql1 = "SELECT * FROM users WHERE username = '$uname'and password = '$pass'";
 $result = $conn->query($sql1);
 
 if ($result->num_rows > 0) {
-
-	header("Location:http://localhost/typerex/index.html"); /* Redirect browser */
+	session_start();
+	$_SESSION['username'] = $uname;
+	$_SESSION['time']     = time();
+	header("Location:http://localhost/temp.github.io/index.php"); /* Redirect browser */
 	exit();
-	
+
 	}
 else {
 					/*if (mysqli_query($conn, $sql)){ echo "Account created";}else {echo "Account can't be created";} } */
-     header("Location:http://localhost/typerex/login.html");
-     exit();				
-     
-     }								
-										
+     header("Location:http://localhost/temp.github.io/login.html");
+     exit();
+
+     }
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
