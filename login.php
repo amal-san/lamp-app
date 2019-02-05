@@ -2,7 +2,7 @@
  
 $servername = "localhost";
 $username = "root";
-$password = "Amal@123";
+$password = "pass";
 $dbname = "typerex";
 
 // Create connection
