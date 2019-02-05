@@ -1,8 +1,7 @@
 <?php
    session_start();
    $user = $_SESSION['username'];
-   $time = $_SESSION['time'];
-   if(!isset($_SESSION['username']))
+   if(!isset($user))
    {
     // not logged in
     header('Location: login.html');
@@ -43,7 +42,7 @@
     <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.html';"></i>
   </div>
   <div id = "login" class = "login">
-  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="showdrop();"></i>
+  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href ='logout.php'"></i>
   <br>
   </div>
 </div>
@@ -98,10 +97,25 @@
        'Never can I consent to have this dear and timid girl brought forward to the notice of the world by such a method; a method which will subject her to all the impertinence of curiosity, the sneers of conjecture, and the stings of ridicule. And for what?-the attainment of wealth which she does not want, and the gratification of vanity which she does not feel. A child to appear against a father!-no, Madam, old and infirm as I am,',
        'Far different had been the motives which would have stimulated her unhappy mother to such a proceeding; all her felicity in this world was irretrievably lost; her life was become a burthen to her; and her fair fame, which she had early been taught to prize above all other things, had received a mortal wound: therefore, to clear her own honour, and to secure from blemish the birth of her child, was all the good which fortune had reserved herself the power of bestowing.'
 ]
+function get_random() {
+<?php
+$method = 'GET'; //change to 'POST' for post method
+$url = 'https://litipsum.com/api/1';
 
+$context = stream_context_create(array(
+        'http' => array(
+            'method' => "$method",
+            'header' => 'Content-Type: application/x-www-form-urlencoded'))
+    );
+$response = file_get_contents($url, false, $context);
+$response = (string)$response;
+?>
+}
 
        var x = Math.floor(Math.random() * 11);
-       randpara = p[x]
+       
+       randpara = p[x];
+
        document.getElementById('para').innerHTML = randpara
 
        var text = randpara
@@ -148,7 +162,7 @@
                });
                $("#startClock").click( function(){
                  $("#my-text-box").focus();
-                 var counter = 2;
+                 var counter = 60;
                  setInterval(function() {
                    counter--;
                    if (counter >= 0) {
