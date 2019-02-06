@@ -1,8 +1,8 @@
 <?php
- 
+
 $servername = "localhost";
 $username = "root";
-$password = "pass";
+$password = "Amal@123";
 $dbname = "typerex";
 
 // Create connection
@@ -29,7 +29,6 @@ $result = $conn->query($sql1);
 if ($result->num_rows > 0) {
 	session_start();
 	$_SESSION['username'] = $uname;
-	$_SESSION['time']     = time();
 	header("Location:http://localhost/temp.github.io/index.php"); /* Redirect browser */
 	exit();
 
@@ -47,3 +46,4 @@ ini_set('display_errors', 'On');
 
 $conn->close();
 ?>
+
