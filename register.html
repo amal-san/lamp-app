@@ -21,10 +21,6 @@
       <div id = "home" class = "home">
         <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.html';"></i>
       </div>
-      <div id = "login" class = "login">
-      <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href ='logout.php'"></i>
-      <br>
-      </div>
     </div>
     <div id="registerform">
       <div id = "regihead">
@@ -32,15 +28,15 @@
       </div>
       <br><br>
       <form id = "register" action = "register.php" method = "post">
-      <input type="text" name = "username" placeholder="Username"style="font-size: 10pt; height: 25px; width:240px;">
+      <input type="text" name = "username" placeholder="Username"style="font-size: 10pt; height: 25px; width:240px;" required>
       <br><br><br>
-      <input type="email" name = "email"  placeholder="Email"style="font-size: 10pt; height: 25px; width:240px;">
+      <input type="email" name = "email"  placeholder="Email"style="font-size: 10pt; height: 25px; width:240px;" required>
       <br><br><br>
-      <input type ="password" id = "password" name = "password" placeholder="Password"style="font-size: 10pt; height: 25px; width:240px;">
+      <input type ="password" id = "password" name = "password" placeholder="Password"style="font-size: 10pt; height: 25px; width:240px;" required>
       <br><br>
       <input type="checkbox" onclick="shwpass()">Show Password
       <br><br>
-      <input id = "submit" type="submit" value = "Login"/>
+      <input id = "submit" type="submit" value = "Register"/>
       </form>
       </div>
       <script type="text/javascript">
@@ -56,3 +52,4 @@
         </script>
     </body>
     </html>
+
