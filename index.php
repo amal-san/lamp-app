@@ -44,7 +44,7 @@
     <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.html';"></i>
   </div>
   <div id = "login" class = "login">
-  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="logout();"></i>
+  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href='logout.php';"></i>
   <br>
   </div>
 </div>
@@ -209,7 +209,7 @@ $response = (string)$response;
               if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
               }
-              session_start();
+
               $user = $_SESSION['username'];
               $date = date_default_timezone_set('Asia/Kolkata');
               $today = date('Y-m-d h:m:s');
@@ -228,22 +228,6 @@ $response = (string)$response;
               ?>
 
             }
-            function logout() {
-              <?php
-                    session_start(); 
-
-              	   // Destroy Session 
-              	   $_SESSION = [];  
-              	   session_unset();
-              	   session_destroy(); 
-
-              	   header("Location:http://localhost/temp.github.io/login.html");
-              	   exit();
-
-              ?>
-
-          }
 </script>
   </body>
 </html>
-
