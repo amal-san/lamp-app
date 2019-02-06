@@ -1,13 +1,15 @@
 <?php
    session_start();
    $user = $_SESSION['username'];
+   $date = date_default_timezone_set('Asia/Kolkata');
+   $today = date('Y-m-d h:m:s');
    if(!isset($user))
    {
     // not logged in
     header('Location: login.html');
     exit();
    }
-   $msg = "You have visited this page ". $user;
+   $msg = "You have visited this page ". $today;
 
 
 ?>
@@ -42,7 +44,7 @@
     <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.html';"></i>
   </div>
   <div id = "login" class = "login">
-  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href ='logout.php'"></i>
+  <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href ='logout.php';"></i>
   <br>
   </div>
 </div>
@@ -66,17 +68,18 @@
       </div>
       <div id="alert"style="display: none;">
         <div id="crosign">
-        <i class="fa fa-close" style="font-size:20px;text-align:justify;"onclick="remove();document.location.reload(true);"></i>
+        <i class="fa fa-close" style="font-size:20px;text-align:justify;"onclick="query();document.location.reload(true);"></i>
       </div>
         <h1 style="text-align:center">Completed!!</h1>
         <h2 id = "Wordsper"style="text-align:center; font-size:60px;">0</h2>
         <h3 id = "wpm" style="text-align:center;font-size:20px;font-weight:bold;">WPM</h3>
         <br>
         <div class="wrapper">
-        <button id="alertbt" onclick="stbutton();document.location.reload(true);"style="color:white">Try again</button>
+        <button id="alertbt" onclick="query();document.location.reload(true);"style="color:white">Try again</button>
       </div>
       </div>
-	 <?php  echo ( $msg ); ?>
+	 <?php  echo ( $msg );
+          ?>
 
       <script>
 	  window.onload = function() {
@@ -113,7 +116,7 @@ $response = (string)$response;
 }
 
        var x = Math.floor(Math.random() * 11);
-       
+
        randpara = p[x];
 
        document.getElementById('para').innerHTML = randpara
@@ -155,14 +158,13 @@ $response = (string)$response;
 
 	          }
             var finalwpm = correct/5;
-	          wpm.textContent = correct/5;
             document.getElementById('Wordsper').innerHTML = finalwpm;
 
 
                });
                $("#startClock").click( function(){
                  $("#my-text-box").focus();
-                 var counter = 60;
+                 var counter = 2;
                  setInterval(function() {
                    counter--;
                    if (counter >= 0) {
@@ -189,9 +191,44 @@ $response = (string)$response;
               document.getElementById("alert").style.display ="none";
 
             }
+            function query() {
+              <?php
+
+              $servername = "localhost";
+              $username = "root";
+              $password = "Amal@123";
+              $dbname = "typerex";
+
+              // Create connection
+              $conn = new mysqli($servername, $username, $password, $dbname);
 
 
 
+
+              // Check connection
+              if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+              }
+              session_start();
+              $user = $_SESSION['username'];
+              $date = date_default_timezone_set('Asia/Kolkata');
+              $today = date('Y-m-d h:m:s');
+              
+
+              $sql = "INSERT INTO wpm (username,date) VALUES ('$user','$today')";
+              if (mysqli_query($conn, $sql)) {
+
+                header("Refresh:0");
+
+                }
+              error_reporting(E_ALL);
+              ini_set('display_errors', 'On');
+
+              $conn->close();
+              ?>
+
+            }
 </script>
   </body>
 </html>
+
