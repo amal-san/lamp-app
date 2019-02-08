@@ -9,7 +9,7 @@
     header('Location: login.html');
     exit();
    }
-   $msg = "You have visited this page ". $today;
+   $msg = "You have visited this page ". $myval;
 
 
 ?>
@@ -80,6 +80,12 @@
       </div>
 	 <?php  echo ( $msg );
           ?>
+          <form id ="send" action = "wpm.php" method = 'post'>
+            <p1 name = "user"><?php echo ($user) ?></p1><br>
+            <p2 id = "wpms" name = "wpms"> </p2><br>
+            <p3 name = "today"> <?php echo ($today)?></p3>
+            <input type ="submit" value = "submit">
+          </form>
 
       <script>
 	  window.onload = function() {
@@ -159,6 +165,7 @@ $response = (string)$response;
 	          }
             var finalwpm = correct/5;
             document.getElementById('Wordsper').innerHTML = finalwpm;
+            document.getElementById('wpms').innerHTML = finalwpm;
 
 
                });
@@ -177,6 +184,11 @@ $response = (string)$response;
                   document.getElementById("my-text-box").disabled = true;
                   document.getElementById("alert").style.display = "block";
                   clearInterval(counter);
+                  //$.ajax({
+                    //type: 'POST',
+                    //url: 'index.php',
+                    //data: {'variable': finalwpm},
+                  //});
                 }
               }, 1000);
             })
@@ -192,42 +204,11 @@ $response = (string)$response;
 
             }
             function query() {
-              <?php
-
-              $servername = "localhost";
-              $username = "root";
-              $password = "Amal@123";
-              $dbname = "typerex";
-
-              // Create connection
-              $conn = new mysqli($servername, $username, $password, $dbname);
-
-
-
-
-              // Check connection
-              if ($conn->connect_error) {
-                  die("Connection failed: " . $conn->connect_error);
-              }
-
-              $user = $_SESSION['username'];
-              $date = date_default_timezone_set('Asia/Kolkata');
-              $today = date('Y-m-d h:m:s');
-
-
-              $sql = "INSERT INTO wpm (username,date) VALUES ('$user','$today')";
-              if (mysqli_query($conn, $sql)) {
-
-                header("Refresh:0");
-
-                }
-              error_reporting(E_ALL);
-              ini_set('display_errors', 'On');
-
-              $conn->close();
-              ?>
-
+              var y = document.getElementById("send");
+              y[0].submit();
             }
+
 </script>
   </body>
 </html>
+
