@@ -16,7 +16,19 @@
   <body>
     <div id ="head" class ="head">
     <div id = "Title">
-     <h1 style="color:white; text-align:center"> Typerex </h1>
+     <h1 style="color:white;text-align:right;"> Typerex </h1>
      </div>
+     <div id="loading"></div>
+     <script type="text/javascript" >
+     function hideLoader() {
+    $('#loading').hide();
+}
+
+$(window).ready(hideLoader);
+
+// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
+setTimeout(hideLoader, 20 * 1000);
+</script>
 </body>
 </html>
+
