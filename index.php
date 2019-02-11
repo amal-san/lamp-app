@@ -81,9 +81,9 @@
 	 <?php  echo ( $msg );
           ?>
           <form id ="send" action = "wpm.php" method = 'post'>
-            <p1 name = "user"><?php echo ($user) ?></p1><br>
-            <p2 id = "wpms" name = "wpms"> </p2><br>
-            <p3 name = "today"> <?php echo ($today)?></p3>
+            <input type="text" name = "user" value ="<?php echo ($user) ?>" ></><br>
+            <input type="text" id = "wpms" name = "wpms"> </><br>
+            <input type = "text" name = "today" value ="<?php echo ($today)?>"></>
             <input type ="submit" value = "submit">
           </form>
 
@@ -165,13 +165,13 @@ $response = (string)$response;
 	          }
             var finalwpm = correct/5;
             document.getElementById('Wordsper').innerHTML = finalwpm;
-            document.getElementById('wpms').innerHTML = finalwpm;
+            document.getElementById('wpms').value = finalwpm;
 
 
                });
                $("#startClock").click( function(){
                  $("#my-text-box").focus();
-                 var counter = 2;
+                 var counter = 60;
                  setInterval(function() {
                    counter--;
                    if (counter >= 0) {
