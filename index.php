@@ -68,14 +68,14 @@
       </div>
       <div id="alert"style="display: none;">
         <div id="crosign">
-        <i class="fa fa-close" style="font-size:20px;text-align:justify;"onclick="query();document.location.reload(true);"></i>
+        <i class="fa fa-close" style="font-size:20px;text-align:justify;"onclick="query();"></i>
       </div>
         <h1 style="text-align:center">Completed!!</h1>
         <h2 id = "Wordsper"style="text-align:center; font-size:60px;">0</h2>
         <h3 id = "wpm" style="text-align:center;font-size:20px;font-weight:bold;">WPM</h3>
         <br>
         <div class="wrapper">
-        <button id="alertbt" onclick="query();document.location.reload(true);"style="color:white">Try again</button>
+        <button id="alertbt" onclick="query();"style="color:white">Try again</button>
       </div>
       </div>
 	 <?php  echo ( $msg );
@@ -124,7 +124,7 @@ $response = (string)$response;
        var x = Math.floor(Math.random() * 11);
 
        randpara = p[x];
-
+       document.getElementById("send").style.display = "none";
        document.getElementById('para').innerHTML = randpara
 
        var text = randpara
@@ -204,8 +204,7 @@ $response = (string)$response;
 
             }
             function query() {
-              var y = document.getElementById("send");
-              y[0].submit();
+              document.getElementById("send").submit();
             }
 
 </script>
