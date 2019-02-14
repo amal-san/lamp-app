@@ -26,8 +26,10 @@ if ($conn->connect_error) {
 }
 $select = "SELECT AVG(wpm) FROM wpm WHERE username = '$user'";
 $result = $conn->query($select);
+
 if ($result->num_rows > 0) {
 	 $variable = "This query is working";
+   $row = mysqli_fetch_row($result);
 	}
 ?>
 
@@ -81,7 +83,9 @@ if ($result->num_rows > 0) {
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
 					data: [
-						18, 33, 22, 19, 11, 39, 30, 10, 15, 20, 30, 40, 20, 12, 41],
+            <?php
+              echo implode('<br>', $row);
+        	?>],
 				}]
 			},
 			options: {
@@ -109,9 +113,8 @@ if ($result->num_rows > 0) {
 			window.myLine = new Chart(ctx, config);
 		};
 	</script>
-	<p><?php
-	var_dump($result);
-	?>
+	<p>
+    </p>
 </body>
 
 </html>
