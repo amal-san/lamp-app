@@ -1,5 +1,5 @@
 
-## This is a typing tutorial template
+## This is a typing tutorial web app
 
 #### Under Devolopement
 
