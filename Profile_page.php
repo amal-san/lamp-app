@@ -4,6 +4,16 @@ session_start();
 $user = $_SESSION['username'];
 $date = date_default_timezone_set('Asia/Kolkata');
 $today = date('Y-m-d h:m:s');
+$month = date('F');
+$months = array('nomonth','January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December');
+foreach( $months as $i ) {
+ if($month  == $i)
+ {
+   $mon = $i;
+   break;
+ }
+ }
+
 if(!isset($user))
 {
  // not logged in
@@ -76,9 +86,9 @@ if ($result->num_rows > 0) {
 		var config = {
 			type: 'line',
 			data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+				labels: ['<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>','<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>','<?php echo $mon ?>',],
 				datasets: [{
-					label: 'User',
+					label: '<?php echo $user;?>',
 					fill: false,
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
@@ -116,6 +126,3 @@ if ($result->num_rows > 0) {
 	<p>
     </p>
 </body>
-
-</html>
-
