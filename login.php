@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
 
 	}
 else {
-					/*if (mysqli_query($conn, $sql)){ echo "Account created";}else {echo "Account can't be created";} } */
+					
      header("Location:http://localhost/temp.github.io/login.html");
      exit();
 
