@@ -184,11 +184,6 @@ $response = (string)$response;
                   document.getElementById("my-text-box").disabled = true;
                   document.getElementById("alert").style.display = "block";
                   clearInterval(counter);
-                  //$.ajax({
-                    //type: 'POST',
-                    //url: 'index.php',
-                    //data: {'variable': finalwpm},
-                  //});
                 }
               }, 1000);
             })
@@ -205,6 +200,7 @@ $response = (string)$response;
             }
             function query() {
               document.getElementById("send").submit();
+
             }
  
 
