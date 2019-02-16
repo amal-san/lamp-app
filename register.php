@@ -24,7 +24,7 @@ if (!empty($uname) && !empty($pass))
     $result = $conn->query($sql1);
 
     if ($result->num_rows > 0) {
-	     header("Location:http://localhost/temp.github.io/register.html"); /* Redirect browser */
+	     header("Location:http://localhost/temp.github.io/register.html"); 
 	      exit();
 
 	     }
