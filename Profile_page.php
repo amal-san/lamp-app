@@ -91,7 +91,7 @@ if ($result->num_rows > 0) {
 					label: '<?php echo $user;?>',
 					fill: false,
 					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
+					borderColor: window.chartColors.red,
 					data: [
             <?php
               echo implode('<br>', $row);
