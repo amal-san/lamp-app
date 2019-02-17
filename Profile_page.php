@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
 							// the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
 							suggestedMin: 1,
 
-							// the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+							
 							suggestedMax: 200,
 						}
 					}]
@@ -122,6 +122,9 @@ if ($result->num_rows > 0) {
 			var ctx = document.getElementById('canvas').getContext('2d');
 			window.myLine = new Chart(ctx, config);
 		};
+
+
+
 	</script>
 	<p>
     </p>
