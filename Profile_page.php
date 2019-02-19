@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
 		var config = {
 			type: 'line',
 			data: {
-				labels: ['<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>','<?php echo $mon;?>', '<?php echo $mon;?>', '<?php echo $mon;?>','<?php echo $mon ?>',],
+				labels: ['<?php echo $mon;?>'],
 				datasets: [{
 					label: '<?php echo $user;?>',
 					fill: false,
@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
 							// the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
 							suggestedMin: 1,
 
-							
+
 							suggestedMax: 200,
 						}
 					}]
