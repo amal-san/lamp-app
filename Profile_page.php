@@ -111,7 +111,7 @@ if ($result->num_rows > 0) {
 							suggestedMin: 1,
 
 
-							suggestedMax: 200,
+							suggestedMax: 180,
 						}
 					}]
 				}
