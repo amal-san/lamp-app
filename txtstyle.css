@@ -223,6 +223,12 @@ display:block;
   position: absolute;
   padding-right: 20px;
 }
+#box {
+  background-color:black;
+  font-family: cursive;
+  background:  #b5b5b7;
+
+}
 
 /* Register form */
 #registerform {
@@ -250,4 +256,4 @@ display:block;
     width: 100%;
     z-index: 9999999;
 }
-#head 
+
