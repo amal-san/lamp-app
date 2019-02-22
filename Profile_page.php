@@ -82,6 +82,12 @@ if ($result->num_rows > 0) {
 	<div id = "container"style="width:1000px;">
 		<canvas id="canvas"></canvas>
 	</div>
+  <div id = "box" style = "padding-top:350px;">
+  <p style= "text-align:center;font-size:15px;"> Username : <?php echo $user ?> </p>
+  <p style ="text-align:center;font-size:15px;"> Average of all time : <?php
+    echo implode('<br>', $row);
+?> </p>
+</div>
 	<script>
 		var config = {
 			type: 'line',
@@ -91,7 +97,7 @@ if ($result->num_rows > 0) {
 					label: '<?php echo $user;?>',
 					fill: false,
 					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.red,
+					borderColor: window.chartColors.blue,
 					data: [
             <?php
               echo implode('<br>', $row);
@@ -110,8 +116,8 @@ if ($result->num_rows > 0) {
 							// the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
 							suggestedMin: 1,
 
-
-							suggestedMax: 180,
+							// the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+							suggestedMax: 200,
 						}
 					}]
 				}
@@ -122,10 +128,10 @@ if ($result->num_rows > 0) {
 			var ctx = document.getElementById('canvas').getContext('2d');
 			window.myLine = new Chart(ctx, config);
 		};
-
-
-
 	</script>
 	<p>
     </p>
 </body>
+
+</html>
+
