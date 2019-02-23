@@ -9,7 +9,7 @@
     header('Location: login.html');
     exit();
    }
-   $msg = "You have visited this page ". $myval;
+   $msg = "You have visited this page as ". $user;
 
 
 ?>
@@ -184,6 +184,7 @@ $response = (string)$response;
                   document.getElementById("my-text-box").disabled = true;
                   document.getElementById("alert").style.display = "block";
                   clearInterval(counter);
+            
                 }
               }, 1000);
             })
@@ -200,10 +201,7 @@ $response = (string)$response;
             }
             function query() {
               document.getElementById("send").submit();
-
             }
- 
-
 
 </script>
   </body>
