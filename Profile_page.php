@@ -6,10 +6,18 @@ $date = date_default_timezone_set('Asia/Kolkata');
 $today = date('Y-m-d h:m:s');
 $month = date('F');
 $months = array('nomonth','January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December');
-foreach( $months as $i ) {
- if($month  == $i)
+foreach( $months as $i  => $item) {
+ if($month  == $item)
  {
-   $mon = $i;
+   $mon = $item;
+   $mon1 = $months[$i+1];
+   $mon2 = $months[$i+2];
+   $mon3 = $months[$i+3];
+   $mon4 = $months[$i+4];
+   $mon5 = $months[$i+5];
+   $mon6 = $months[$i+6];
+   $mon7 = $months[$i+7];
+   $mon8 = $months[$i+8];
    break;
  }
  }
@@ -92,7 +100,7 @@ if ($result->num_rows > 0) {
 		var config = {
 			type: 'line',
 			data: {
-				labels: ['<?php echo $mon;?>'],
+				labels: ['<?php echo $mon;?>','<?php echo $mon1;?>','<?php echo $mon2;?>','<?php echo $mon3;?>','<?php echo $mon4;?>','<?php echo $mon5;?>','<?php echo $mon6;?>'],
 				datasets: [{
 					label: '<?php echo $user;?>',
 					fill: false,
