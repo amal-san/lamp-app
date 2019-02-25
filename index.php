@@ -41,7 +41,7 @@
   <h1 style="color:white; text-align:center"> Typerex </h1>
 </div>
   <div id = "home" class = "home">
-    <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='Profile_page.php';"></i>
+    <i class="fa fa-home" style="font-size:38px;color:white;align:center;"onclick="location.href ='#';"></i>
   </div>
   <div id = "login" class = "login">
   <i class="fa fa-user-circle-o" style="font-size:35px;color:white;align:right;"onclick="location.href='logout.php';"></i>
