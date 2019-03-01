@@ -30,7 +30,7 @@ if (!empty($uname) && !empty($pass))
 	     }
     else {
 
-        		/*if (mysqli_query($conn, $sql)){ echo "Account created";}else {echo "Account can't be created";} } */
+        		
       if (mysqli_query($conn, $sql)) {
        session_start();
        $_SESSION['username'] = $uname;
